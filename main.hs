@@ -2,7 +2,7 @@ import Data.Char
 main = do
  line <- getLine
  --transforma a linha numa lista
- frames <- return (map digitToInt $ filter (/=' ') line)
+ frames <- return (map read $ words line :: [Int])
  
  print $ getBowlingScore frames
 
