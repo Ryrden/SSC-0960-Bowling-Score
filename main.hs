@@ -24,10 +24,10 @@ getBowlingScore (h:b:l:t) = if h == 10                then h + b + l + getBowlin
 
 
 getBowlingOutput :: Int -> [Int] -> String
+getBowlingOutput 9 [10] = "X"
 getBowlingOutput 9 (10:t) = "X " ++ getBowlingOutput 9 t
-getBowlingOutput 9 (h:b:t) =  if (h+b) == 10 then show h ++ " / " ++ getBowlingOutput 9 t
-                              else show h ++ " " ++ show b ++ " " ++ getBowlingOutput 9 t
-getBowlingOutput 9 [a] = show a
+getBowlingOutput 9 (h:b:l:t) =  if (h+b) == 10 then show h ++ " / " ++ getBowlingOutput 9 (l:t)
+                              else show h ++ " " ++ show b ++ " " ++ show l
 getBowlingOutput a (10:t) = "X _|" ++ getBowlingOutput (a+1) t
 getBowlingOutput a (h:b:t) =  if (h+b) == 10 then show h ++ " /|" ++ getBowlingOutput (a+1) t
                               else show h ++ " " ++ show b ++ "|" ++ getBowlingOutput (a+1) t
