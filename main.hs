@@ -24,11 +24,12 @@ getBowlingScore (h:b:l:t) = if h == 10                then h + b + l + getBowlin
 
 
 getBowlingOutput :: Int -> [Int] -> String
-getBowlingOutput 9 [10] = "X"
-getBowlingOutput 9 (10:t) = "X " ++ getBowlingOutput 9 t
-getBowlingOutput 9 (h:b:l:t) =  if (h+b) == 10 then show h ++ " / " ++ getBowlingOutput 9 (l:t)
-                              else show h ++ " " ++ show b ++ " " ++ show l
-getBowlingOutput a (10:t) = "X _|" ++ getBowlingOutput (a+1) t
-getBowlingOutput a (h:b:t) =  if (h+b) == 10 then show h ++ " /|" ++ getBowlingOutput (a+1) t
-                              else show h ++ " " ++ show b ++ "|" ++ getBowlingOutput (a+1) t
-getBowlingOutput _ _ = ""
+getBowlingOutput 9 (a:b:c) =  if       a    == 10 then getBowlingOutput 9 [a] ++ " "   ++ getBowlingOutput 9     (b:c) 
+                              else if (a+b) == 10 then getBowlingOutput 9 [a] ++ " /"  ++ getBowlingOutput 9      c
+                              else                     getBowlingOutput 9 [a] ++ " "   ++ getBowlingOutput 9     (b:c)
+getBowlingOutput a (b:c:d) =  if       b    == 10 then getBowlingOutput a [b] ++ " _|" ++ getBowlingOutput (a+1) (c:d)
+                              else if (b+c) == 10 then getBowlingOutput a [b] ++ " /|" ++ getBowlingOutput (a+1)  d 
+                              else                     getBowlingOutput a [b] ++ " "   ++ getBowlingOutput a     [c]   ++ "|" ++ getBowlingOutput (a+1) d
+getBowlingOutput a [10] = "X"
+getBowlingOutput a [b]  = show b
+getBowlingOutput _  _   = ""
