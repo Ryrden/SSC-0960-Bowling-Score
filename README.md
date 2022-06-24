@@ -20,6 +20,7 @@ jogada. O bônus é igual ao número de pinos derrubados.
 
 ● O total de 1 partida pode variar de zero a 300 pontos.
 ```
+
 A pontuação pode ir de zero (quando nenhum pino é derrubado nas dez jogadas ou “frames”) até o máximo
 possível de 300 pontos, ou seja, 12 “strikes” consecutivos. Supostamente, como cada partida tem 10 “frames”
 (jogadas), só seriam possíveis 10 “strikes”. Porém, se o jogador derrubar todos os pinos no primeiro arremesso
@@ -29,7 +30,7 @@ Faça um programa que leia a quantidade de pinos derrubados por um praticante de
 imprima:
 
 1. A sequência de pinos derrubados (de acordo com os exemplos de entrada e saída e as anotações de
-    contagem de pontos -https://boliche.com.br/esporte-boliche/contagem-dos-pontos-no-boliche/);
+   contagem de pontos -https://boliche.com.br/esporte-boliche/contagem-dos-pontos-no-boliche/);
 2. A pontuação final do jogador.
 
 Dica: Para testar seu programa, sugere-se utilizar o seguinte simulador de pontos:
@@ -39,26 +40,25 @@ https://www.bowlinggenius.com/
 
 #### Exemplo 1:
 
-
-Entrada
-```
-1 4 4 5 6 4 5 5 10 0 1 7 3 6 4 10 2 8 6
-```
-Saida
-```
-1 4 | 4 5 | 6 / | 5 / | X _ | 0 1 | 7 / | 6 / | X _ | 2 / 6
-```
+|                 Entrada                 |                                Saida                                 |
+| :-------------------------------------: | :------------------------------------------------------------------: |
+| 1 4 4 5 6 4 5 5 10 0 1 7 3 6 4 10 2 8 6 | 1 4 \| 4 5 \| 6 / \| 5 / \| X _ \| 0 1 \| 7 / \| 6 / \| X _ \| 2 / 6 |
 
 #### Exemplo 2:
 
+|               Entrada               |                                 Saida                                 |
+| :---------------------------------: | :-------------------------------------------------------------------: |
+| 10 10 10 10 10 10 10 10 10 10 10 10 | X _ \| X _ \| X _ \| X _ \| X _ \| X _ \| X _ \| X _ \| X \_ \| X X X |
 
-Entrada
-```
-10 10 10 10 10 10 10 10 10 10 10 10
-```
+#### Exemplo 3:
 
-Saída
-```
-X _ | X _ | X _ | X _ | X _ | X _ | X _ | X _ | X _ | X X X
-```
+|               Entrada                |                                 Saida                                  |
+| :----------------------------------: | :--------------------------------------------------------------------: |
+| 8 0 7 5 3 9 1 9 1 10 8 0 5 1 3 7 9 0 | 8 0 \| 7 0 \| 5 3 \| 9 / \| 9 / \| X \_ \| 8 0 \| 5 1 \| 3 / \| 9 0 \| |
 
+#### Exemplo 4:
+
+|                 Entrada                 |                                Saida                                 |
+| :-------------------------------------: | :------------------------------------------------------------------: |
+| 8 2 9 0 4 4 7 2 9 0 10 10 8 0 3 5 9 1 7 | 8 / \| 9 0 \| 4 4 \| 7 2 \| 9 0 \| X _ \| X _ \| 8 0 \| 3 5 \| 9 /7" |
+|                                         |
