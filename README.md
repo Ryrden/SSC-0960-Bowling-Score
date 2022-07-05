@@ -19,6 +19,10 @@ jogadas)
 jogada. O bônus é igual ao número de pinos derrubados.
 
 ● O total de 1 partida pode variar de zero a 300 pontos.
+
+● Os pontos são analizados pelos frames, o que significa que, um strike no 10º frame, permite o jogador 
+jogar mais duas bolas, e um strike consecutivo a ele, não vai fazer com que a terceira e última jogada do frame
+valha como mais bônus, ou seja, valem apenas como bônus do primeiro strike do frame.
 ```
 
 A pontuação pode ir de zero (quando nenhum pino é derrubado nas dez jogadas ou “frames”) até o máximo
